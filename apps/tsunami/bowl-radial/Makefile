@@ -22,7 +22,8 @@ CLAW_PLOTDIR = _plots               # Directory for plots
 # Environment variable FC should be set to fortran compiler, e.g. gfortran
 FC ?= gfortran   # default if not set as environment variable
 # Add any desired compiler flags such as -g here:
-FFLAGS ?=
+FFLAGS ?=  -O2 
+
 # If you want to include NetCDF output add these flags
 # FFLAGS ?=-I/usr/include  -lnetcdf -lnetcdff
 
@@ -37,6 +38,7 @@ CLAW_SOURCES = \
 # Clawpack libraries to be used:
 CLAW_LIB = $(CLAW)/amrclaw/2d/lib
 GEOLIB = $(CLAW)/geoclaw/2d/lib
+IGEOLIB = -I$(GEOLIB)
 
 CLAW_LIBSOURCES = \
   $(GEOLIB)/geoclaw_mod.f90 \

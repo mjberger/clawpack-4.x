@@ -17,14 +17,16 @@ Overview and Getting Started:
    about
    changes
    installing
+   github
 
 .. toctree::
    :maxdepth: 1
 
    claw43
-   claw43to44
+   convert
    trouble
    vm
+   aws
 
 Documentation and Examples:
 
@@ -52,6 +54,8 @@ Fortran and Python codes:
    setrun
    mapc2p
    amrclaw/index
+   ascii_output_format
+   netcdf
    
 Plotting:
 
@@ -72,6 +76,7 @@ Advanced features:
 .. toctree::
    :maxdepth: 1
    
+   openmp
    gauges
 
 Extensions to the standard Clawpack codes:

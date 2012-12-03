@@ -19,8 +19,7 @@ CLAWMAKE = $(CLAW)/util/Makefile.common
 # Environment variable FC should be set to fortran compiler, e.g. gfortran
 FC ?= gfortran   # default if not set as environment variable
 # Add any desired compiler flags such as -g here:
-#FFLAGS ?=  
-FFLAGS ?=  -fopenmp   -fbounds-check  -ffpe-trap=zero,overflow,invalid -g
+FFLAGS ?=  -O2 
 
 
 CLAW_LIB = $(shell pwd)
@@ -118,6 +117,7 @@ CLAW_SOURCES = \
   $(CLAW_LIB)/check_hdf.f \
   $(CLAW_LIB)/restrt_hdf.f \
   $(CLAW_LIB)/valout_hdf.f \
+  $(CLAW_LIB)/valout_nc.f \
   $(CLAW_LIB)/opendatafile.f \
   $(CLAW_LIB)/dumpgauge.f \
   $(CLAW_LIB)/setgauges.f \
